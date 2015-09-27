@@ -1,7 +1,7 @@
 {
-  "name": "c",
-  "version": "1.0.0",
-  "description": "Betmais",
+  "name": "VictoryRoom",
+  "version": "0.0.2",
+  "description": "VictoryRoom - Casino Project",
   "main": "gulpfile.js",
   "dependencies": {
     "gulp-concat": "^2.6.0",
@@ -16,11 +16,7 @@
     "gulp-minify-css": "^1.2.1"
   },
   "devDependencies": {
-    "gulp-compass": "^2.1.0",
     "node-bourbon": "^4.2.3"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nima",
   "license": "ISC"

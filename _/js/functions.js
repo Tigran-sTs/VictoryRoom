@@ -9,10 +9,13 @@
 // b.setAttribute('data-platform', navigator.platform);
 
 
-function initPage(){
+jQuery(function($) {
 
-	// your functions go here
+	// Dropdown
+    $(".lang").click(function(){
+        $(this).toggleClass("hover");
+    });
+    
+    // $("ul.dropdown li ul li:has(ul)").find("a:first").append(" &raquo; ");
 
-	alert('page loaded');
-
-}
+});

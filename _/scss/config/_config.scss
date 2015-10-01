@@ -1,10 +1,42 @@
-// Colors
-$backgroundC : #121623;
-$textC : #ccc;
-$headerC : #AAA;
-$bannerC : #000;
+
+// C stands for Color
+// B stands for Border
+// BR stands for Border Radius
+
+//************************//
+//        Colors          //
+//************************//
+
+$backgroundC : #1A1F32;
+$mainC : #141721;
+$btnC : #46AE5F;
+$btn2C : #67C0E7;
+$headerC : #121623;
+$brightFontC : #FFFFFF;
+
+
+//************************//
+//        border          //
+//************************//
+$borderBR6 : 6px;
+$borderBR5 : 5px;
+$borderBR4 : 4px;
+
+//************************//
+//        border          //
+//************************//
+$borderBtn1 : 2px solid $btn2C;
+
+
+//************************//
+//        Transition      //
+//************************//
+.transit04{
+	transition : .25s all;
+}
 
 // Page Configs
+html{background-color:$backgroundC}
 select, input, textarea {color: #ECF0F6;outline: none;}
 b{font-weight: 600}
 a {color: #2C519B;text-decoration: none;}
@@ -13,7 +45,7 @@ a:hover {}
 ul,ol{list-style: none;}
 textarea,
 input[type=password],
-input[type=text]{font-size: 11px;color: #9D9D9D;text-indent: 15px;outline: none;border:1px solid #ECF0F6;height: 34px;font-family: "Open Sans"}
+input[type=text]{font-size: 11px;color: #9D9D9D;text-indent: 15px;outline: none;border:1px solid #ECF0F6;height: 34px;font-family: "Roboto"}
 input[type=text]{padding-top: 0}
 select:focus,
 textarea:focus,
@@ -42,5 +74,4 @@ ul{list-style: none;}
 label{color: #6b7684;cursor: default;}
 p{color: #9d9d9d}
 
-html{background-color:$backgroundC}
-body{color:$textC;}
+

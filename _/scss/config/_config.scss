@@ -1,0 +1,85 @@
+
+// C stands for Color
+// B stands for Border
+// BR stands for Border Radius
+// CO stands for Color Opaticy
+
+//************************//
+//        Colors          //
+//************************//
+
+$backgroundC : #121623;
+$mainC : #141721;
+$btnC : #57B667;
+$btn2C : #68C1E8;
+$headerC : #121623;
+$headerCO : rgba(18,22,35,.95);
+$brightFontC : #FFFFFF;
+$textLinkC : $btnC;
+$goldishC : #68C1E8;
+$iconC : #727787;
+$titleC : #727888;
+$title2ndC : #484F5E;
+$errorc : #C25555;
+$borderFooterC : #505767;
+
+
+//************************//
+//     border Radius   	  //
+//************************//
+$borderBR6 : 6px;
+$borderBR5 : 5px;
+$borderBR4 : 4px;
+
+//************************//
+//        border          //
+//************************//
+$borderBtn1 : 2px solid $btn2C;
+
+//************************//
+//        Transition      //
+//************************//
+.transit04{
+	transition : .25s all;
+}
+
+// Page Configs
+html{background-color:$backgroundC}
+select, input, textarea {color: #ECF0F6;outline: none;}
+b{font-weight: 600}
+a {color: #2C519B;text-decoration: none;}
+a:focus{outline: none;}
+a:hover {}
+ul,ol{list-style: none;}
+textarea,
+input[type=password],
+input[type=text]{font-size: 11px;color: #9D9D9D;text-indent: 15px;outline: none;border:1px solid #ECF0F6;height: 34px;font-family: "Roboto"}
+input[type=text]{padding-top: 0}
+select:focus,
+textarea:focus,
+input[type=text]:focus{box-shadow: 0 0 10px rgba(0,0,0,.1);transition:.4s all;}
+textarea{min-height:130px;padding: 15px;text-indent: 0 }
+select{float: left;background:#FFF;border:1px #ECF0F6 solid;outline: none;border-radius: 1px;color: #9D9D9D;padding: 0 8px;width:220px;height: 34px;font-size: 11px;background:#FFF url(../img/icon/select-arrow.png) no-repeat right 14px;-webkit-appearance: none;overflow: hidden;-moz-appearance: none;-webkit-appearance: none;-ms-appearance: none;-moz-appearance: none;appearance: none;}
+// .checkbox label input {display: none;}
+// .checkbox label span {height: 17px; width: 17px;display: inline-block;margin: 15px 5px 0 0;position: relative;background: url(../img/icon/checkbox.png) top;top: 5px;transition: .2s all}
+// .checkbox input[type=checkbox]:checked + span {background: url(../img/icon/checkbox.png) bottom;}
+
+::-webkit-input-placeholder {font-size: 10px;color: #D5DAE1}
+::-moz-placeholder {font-size: 10px;color: #D5DAE1}
+
+/* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
+::-moz-selection{background: rgba(25,25,25,.1);text-shadow: none;}
+::selection {background: rgba(25,25,25,.1); text-shadow: none;} 
+
+/*	j.mp/webkit-tap-highlight-color */
+a:link {-webkit-tap-highlight-color:transparent;} 
+
+ins {background-color: #fcd700; color: #000; text-decoration: none;}
+mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
+
+/* Mozilla dosen't style place holders by default */
+ul{list-style: none;}
+label{color: #6b7684;cursor: default;}
+p{color: #9d9d9d}
+
+

@@ -1,0 +1,30 @@
+// Bourbon
+// @import "bourbon/bourbon";
+
+// Base 
+@import "base/reset";
+@import "base/typography";
+@import "base/grid";
+
+// Config (colors, fonts) 
+@import "config/config";
+
+// Layouts
+@import "layout/header";
+@import "layout/footer";
+
+// Themes
+@import "themes/theme";
+
+// Utilities
+@import "utils/helpers";
+@import "utils/variables";
+
+// Components 
+@import "components/buttons";
+
+// Vendors 
+@import "vendors/slick.scss";
+
+// Pages
+@import "pages/home";

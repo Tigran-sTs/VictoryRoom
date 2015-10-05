@@ -1,0 +1,38 @@
+header{width: 100%;min-height:45px;padding-top:15px;background-color:$headerCO;padding:0 15px;display:block;position:fixed;top:0;left:0;;z-index: 99;
+	&:before{width:100%;height:100%;position:absolute;z-index: -1}
+	.logo{background:url(../img/logo.png) no-repeat;width:244px;height:40px;margin:22px 0 0 0;text-indent:-9999px;overflow:hidden;position: absolute;float: left;}
+	nav{list-style:none;margin:0;padding:0;text-align:center;color: #FFF;font-size:14px;text-transform:uppercase;}
+	nav li{display:inline;height:100%;
+		&.active > a{color:$btn2C;font-weight:600}
+	}
+	nav a{display:inline-block;padding:6px 1.30208333333333% 0;height:100%;line-height:100%;color:$brightFontC;line-height: 440%;position:relative;@extend .transit04;
+		&:hover {color:$btn2C;background-color:#161B2B;}
+		&:before {height:0;width:100%;content:" ";position:absolute;top:0;left:0;@extend .transit04;}
+		&:hover:before {height:5px;background-color:$btn2C;}
+	}
+	.acc{position:absolute;right:0;height:100%;top:15px;right:15px;
+		.lang{float:right;border-left:#5A5D6A solid 1px;cursor:pointer;max-height:13px;position:relative;min-width:43px;text-indent:10px;overflow:hidden;margin:15px 0 0 15px;@extend .transit04;
+			a{float:left;width:100%;color:$brightFontC;line-height:100%;padding:10px 0;
+				&:first-child{padding:0 0 10px 0;}
+			}
+			&:before{background:url(../img/icons/sprite.png) -52px -8px;width:9px;height:5px;content:" ";position:absolute;top:4px;right:10px;}
+			&.hover{max-height:100%;
+				a:not(:first-child){background:#121623;}
+			}
+		}
+		.iconLinks{width:20px;height:20px;background:url(../img/icons/sprite.png) no-repeat;float:right;margin:10px 0 0 15px;text-indent:-9999px;overflow:hidden;}
+		.iconLinks:hover{margin-top:11px;}
+		.helpCenter{background-position:-26px 0;@extend .iconLinks}
+		.liveChat{background-position: 0 0;@extend .iconLinks}
+        .btn{float:right;letter-spacing:1px;height:30px;line-height:30px;text-align:center;text-transform:uppercase;font-size:12px;font-weight:500;border:1px solid transparent;margin:5px 0 0 15px;padding:0 20px}
+	}	
+	.btn.registerC{color:$brightFontC;background-color:$btnC;text-shadow:0 0 1px #AAA;@extend .transit04;
+		&:hover{height:38px;padding:4px 20px;margin-top:1px}
+		&:active{transform:scale(.9)}
+	}
+	.btn.loginC{color:$btn2C;border-color: $btn2C;text-shadow:0 0 1px #333;@extend .transit04;
+		// &:hover{box-shadow:0 0 8px $btn2C;}
+		&:hover{height:38px;padding:4px 20px;margin-top:1px;background:rgba(0,0,0,.2)}
+		&:active{transform:scale(.9)}
+	}
+}

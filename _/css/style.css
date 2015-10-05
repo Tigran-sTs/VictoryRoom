@@ -494,7 +494,7 @@ footer {
     padding-top: 35px; }
   footer .links {
     width: 100%;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     float: left; }
     footer .links li {
       width: 20%;
@@ -520,6 +520,92 @@ footer {
       text-transform: uppercase;
       padding-bottom: 10px;
       font-weight: 500; }
+  footer .divider {
+    width: 100%;
+    height: 1px;
+    background-color: #505767;
+    float: left;
+    margin-bottom: 10px;
+    margin-top: 10px; }
+  footer .payMethods, footer .partners {
+    float: left;
+    width: 75%; }
+    footer .payMethods .title, footer .partners .title {
+      font-size: 12px;
+      text-transform: uppercase;
+      line-height: 100%; }
+    footer .payMethods ol, footer .partners ol {
+      float: left; }
+      footer .payMethods ol li, footer .partners ol li {
+        float: left;
+        margin-right: 40px; }
+  footer .payMethods ol li i {
+    float: left;
+    background-image: url(../img/payment-methods/all.png);
+    background-repeat: no-repeat;
+    height: 44px;
+    animation-name: opacityOnHoverBack;
+    animation-timing-function: ease-in-out;
+    animation-duration: .2s; }
+    footer .payMethods ol li i:hover {
+      animation-name: opacityOnHover;
+      animation-timing-function: ease-in-out;
+      animation-duration: .2s; }
+    footer .payMethods ol li i.visa {
+      background-position: 0 0;
+      width: 57px; }
+      footer .payMethods ol li i.visa:hover {
+        background-position: 0 -52px; }
+    footer .payMethods ol li i.masterCard {
+      background-position: -111px 0;
+      width: 62px; }
+      footer .payMethods ol li i.masterCard:hover {
+        background-position: -111px -50px; }
+    footer .payMethods ol li i.skrill {
+      background-position: -230px 0;
+      width: 57px; }
+      footer .payMethods ol li i.skrill:hover {
+        background-position: -230px -51px; }
+    footer .payMethods ol li i.neteller {
+      background-position: -342px 0;
+      width: 94px; }
+      footer .payMethods ol li i.neteller:hover {
+        background-position: -342px -51px; }
+    footer .payMethods ol li i.qiwi {
+      background-position: -481px 0;
+      width: 91px; }
+      footer .payMethods ol li i.qiwi:hover {
+        background-position: -481px -51px; }
+    footer .payMethods ol li i.webMoney {
+      background-position: -617px 0;
+      width: 101px; }
+      footer .payMethods ol li i.webMoney:hover {
+        background-position: -617px -51px; }
+    footer .payMethods ol li i.ecoPays {
+      background-position: -758px 0;
+      width: 84px; }
+      footer .payMethods ol li i.ecoPays:hover {
+        background-position: -758px -51px; }
+    footer .payMethods ol li i.beeline {
+      background-position: -899px 0;
+      width: 115px; }
+      footer .payMethods ol li i.beeline:hover {
+        background-position: -899px -51px; }
+  footer .partners {
+    width: 20%;
+    margin-left: 5%; }
+
+@keyframes opacityOnHover {
+  from, to {
+    transform: scale(0.9); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes opacityOnHoverBack {
+  from, to {
+    transform: scale(0.9); }
+  100% {
+    transform: scale(1); } }
 
 /* Slider */
 .slick-slider {
@@ -706,9 +792,9 @@ footer {
     border: none; }
 
 .slick-active img {
-  -webkit-animation-name: bounce-background;
+  animation-name: bounce-background;
   animation-timing-function: ease-in-out;
-  animation-duration: 40s;
+  animation-duration: 30s;
   animation-iteration-count: infinite; }
 
 @keyframes bounce-background {

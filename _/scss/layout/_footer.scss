@@ -1,6 +1,6 @@
 footer {width:100%;
 	.container{border-top:$borderFooterC 1px solid;padding-top:35px;}
-	.links{width:100%;padding-bottom:30px;float: left;
+	.links{width:100%;padding-bottom:20px;float: left;
 		li{width:20%;float:left}
 		p{float: left;width:100%;line-height:100%;margin-bottom:15px;font-size:14px;
 			a{color:$title2ndC;border-bottom:1px solid transparent;padding-bottom:0;font-weight:500;@extend .transit04;
@@ -9,4 +9,58 @@ footer {width:100%;
 		}
 		.title{font-size:15px;color:$titleC;text-transform:uppercase;padding-bottom:10px;font-weight:500;}
 	}
+	.divider{width:100%;height:1px;background-color:$borderFooterC;float: left;margin-bottom:10px;margin-top:10px;}
+	.payMethods, .partners{float:left;width:75%;
+		.title{font-size:12px;text-transform:uppercase;line-height:100%}
+		ol{float: left;
+			li{float: left;margin-right:40px;
+			}
+		}
+	}
+	.payMethods ol li i{float: left;background-image:url(../img/payment-methods/all.png);background-repeat:no-repeat;height:44px;animation-name:opacityOnHoverBack;animation-timing-function:ease-in-out;animation-duration:.2s;
+		&:hover{animation-name:opacityOnHover;animation-timing-function:ease-in-out;animation-duration:.2s;}
+		&.visa{background-position:0 0;width:57px;
+			&:hover{background-position:0 -52px;}
+		}
+		&.masterCard{background-position:-111px 0;width:62px;
+			&:hover{background-position:-111px -50px;}
+		}
+		&.skrill{background-position:-230px 0;width:57px;
+			&:hover{background-position:-230px -51px;}
+		}
+		&.neteller{background-position:-342px 0;width:94px;
+			&:hover{background-position:-342px -51px;}
+		}
+		&.qiwi{background-position:-481px 0;width:91px;
+			&:hover{background-position:-481px -51px;}
+		}
+		&.webMoney{background-position:-617px 0;width:101px;
+			&:hover{background-position:-617px -51px;}
+		}
+		&.ecoPays{background-position:-758px 0;width:84px;
+			&:hover{background-position:-758px -51px;}
+		}
+		&.beeline{background-position:-899px 0;width:115px;
+			&:hover{background-position:-899px -51px;}
+		}
+	}
+	.partners{width:20%;margin-left:5%;}
+
+	@keyframes opacityOnHover {
+	    from, to {
+	        transform:scale(.9);
+	    }
+	    100% {
+	        transform:scale(1);
+	    }
+	}
+	@keyframes opacityOnHoverBack {
+	    from, to {
+	        transform:scale(.9);
+	    }
+	    100% {
+	        transform:scale(1);
+
+	    }
+	}	
 }

@@ -20,11 +20,12 @@
 	.container{border:none;}
 }
 .slick-active img {
-    -webkit-animation-name:bounce-background;
+    animation-name:bounce-background;
     animation-timing-function:ease-in-out;
-    animation-duration:40s;
+    animation-duration:30s;
     animation-iteration-count:infinite
 }
+
 @keyframes bounce-background {
     from, to {
         transform:scale(1)

@@ -1,10 +1,11 @@
-header{width: 100%;height:70px;background-color:$headerC;padding:0 15px;display:block;position:relative;
-	.logo{background:url(../img/logo.png) no-repeat;width:244px;height:40px;margin:16px 0 0 0;text-indent:-9999px;overflow:hidden;position: absolute;float: left;}
-	nav{list-style:none;margin:0;padding:0;text-align:center;color: #FFF;font-size:16px;text-transform:uppercase;}
+header{width: 100%;min-height:45px;padding-top:15px;background-color:$headerCO;padding:0 15px;display:block;position:fixed;top:0;left:0;;z-index: 99;
+	&:before{width:100%;height:100%;position:absolute;z-index: -1}
+	.logo{background:url(../img/logo.png) no-repeat;width:244px;height:40px;margin:22px 0 0 0;text-indent:-9999px;overflow:hidden;position: absolute;float: left;}
+	nav{list-style:none;margin:0;padding:0;text-align:center;color: #FFF;font-size:14px;text-transform:uppercase;}
 	nav li{display:inline;height:100%;
-		&.active > a{color:$btn2C;font-weight:500}
+		&.active > a{color:$btn2C;font-weight:600}
 	}
-	nav a{display:inline-block;padding:0 1.30208333333333%;height:100%;line-height:100%;color:$brightFontC;line-height: 440%;font-weight:400;position:relative;@extend .transit04;
+	nav a{display:inline-block;padding:6px 1.30208333333333% 0;height:100%;line-height:100%;color:$brightFontC;line-height: 440%;position:relative;@extend .transit04;
 		&:hover {color:$btn2C;background-color:#161B2B;}
 		&:before {height:0;width:100%;content:" ";position:absolute;top:0;left:0;@extend .transit04;}
 		&:hover:before {height:5px;background-color:$btn2C;}
@@ -23,13 +24,15 @@ header{width: 100%;height:70px;background-color:$headerC;padding:0 15px;display:
 		.iconLinks:hover{margin-top:11px;}
 		.helpCenter{background-position:-26px 0;@extend .iconLinks}
 		.liveChat{background-position: 0 0;@extend .iconLinks}
-        .btn{float:right;height:32px;line-height:30px;text-align:center;text-transform:uppercase;font-size:14px;letter-spacing:1px;font-weight:400;border:2px solid transparent;margin:5px 0 0 15px;padding:0 20px}
+        .btn{float:right;letter-spacing:1px;height:30px;line-height:30px;text-align:center;text-transform:uppercase;font-size:12px;font-weight:500;border:1px solid transparent;margin:5px 0 0 15px;padding:0 20px}
 	}	
-	.btn.borderBR6{border-radius:$borderBR6;}
-	.btn.registerC{color:$brightFontC;background-color:$btnC;@extend .transit04;
-		&:hover{}
+	.btn.registerC{color:$brightFontC;background-color:$btnC;text-shadow:0 0 1px #AAA;@extend .transit04;
+		&:hover{height:38px;padding:4px 20px;margin-top:1px}
+		&:active{transform:scale(.9)}
 	}
-	.btn.loginC{color:$btn2C;border-color: $btn2C;@extend .transit04;
-		&:hover{color:$brightFontC;background-color: $btn2C;}
+	.btn.loginC{color:$btn2C;border-color: $btn2C;text-shadow:0 0 1px #333;@extend .transit04;
+		// &:hover{box-shadow:0 0 8px $btn2C;}
+		&:hover{height:38px;padding:4px 20px;margin-top:1px;background:rgba(0,0,0,.2)}
+		&:active{transform:scale(.9)}
 	}
 }

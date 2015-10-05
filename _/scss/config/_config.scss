@@ -2,21 +2,30 @@
 // C stands for Color
 // B stands for Border
 // BR stands for Border Radius
+// CO stands for Color Opaticy
 
 //************************//
 //        Colors          //
 //************************//
 
-$backgroundC : #1A1F32;
+$backgroundC : #121623;
 $mainC : #141721;
-$btnC : #46AE5F;
-$btn2C : #67C0E7;
+$btnC : #57B667;
+$btn2C : #68C1E8;
 $headerC : #121623;
+$headerCO : rgba(18,22,35,.95);
 $brightFontC : #FFFFFF;
+$textLinkC : $btnC;
+$goldishC : #68C1E8;
+$iconC : #727787;
+$titleC : #727888;
+$title2ndC : #484F5E;
+$errorc : #C25555;
+$borderFooterC : #505767;
 
 
 //************************//
-//        border          //
+//     border Radius   	  //
 //************************//
 $borderBR6 : 6px;
 $borderBR5 : 5px;
@@ -26,7 +35,6 @@ $borderBR4 : 4px;
 //        border          //
 //************************//
 $borderBtn1 : 2px solid $btn2C;
-
 
 //************************//
 //        Transition      //

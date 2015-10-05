@@ -1,0 +1,12 @@
+footer {width:100%;
+	.container{border-top:$borderFooterC 1px solid;padding-top:35px;}
+	.links{width:100%;padding-bottom:30px;float: left;
+		li{width:20%;float:left}
+		p{float: left;width:100%;line-height:100%;margin-bottom:15px;font-size:14px;
+			a{color:$title2ndC;border-bottom:1px solid transparent;padding-bottom:0;font-weight:500;@extend .transit04;
+				&:hover{border-color:#C5C9D2;padding-bottom:3px;color:#C5C9D2}
+			}
+		}
+		.title{font-size:15px;color:$titleC;text-transform:uppercase;padding-bottom:10px;font-weight:500;}
+	}
+}

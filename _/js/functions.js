@@ -28,9 +28,9 @@ jQuery(function($) {
 	$('#slides').slick({
 	  	dots: true,
 	  	infinite: true,
-	  	// autoplay: true,
+	  	autoplay: true,
 	  	duration: 5000,
-	  	mobileFirst: true,
+	  	infinite: true,
 	  	centerPadding: '50%',
 	  	arrows: false,
 		  responsive: [

@@ -1,4 +1,4 @@
-.slideWrap{position:relative;z-index:1;overflow:hidden}
+.slideWrap{position:relative;z-index:1;overflow:hidden;border-bottom: 1px #272C37 solid;}
 .slick-slide img{min-width:1920px;}
 .slick-dots{position: absolute; right: 5%;left: auto;bottom: 50px;z-index: 5;text-indent: -9999px;
 	 li{border-radius:50%;width:12px;height:12px;background:#61666A;opacity:.8;float:left;margin-left:3px;cursor:pointer;outline:hidden;border:none;}
@@ -16,7 +16,6 @@
 .slick-active img{}
 .slick-slide{outline: none; position:relative;overflow:hidden}
 .landingPage footer {
-	border-top:#161B2B solid 15px;
 	.container{border:none;}
 }
 .slick-active img {

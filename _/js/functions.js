@@ -48,27 +48,27 @@ jQuery(function($) {
 		      settings: {
 		      }
 		    }
-		  ]  
+		  ] 
+		  
 	});
 
-var sliderSize = function(){ 
+	var sliderSize = function(){ 
 	//fit slider image on window height
 		var sliderHeight = $(window).height();
 		$('#slides').css('height', sliderHeight);
-	};
-   
-	sliderSize();
+	});
+		sliderSize();
 
-    $(window).on("resize", function(event){
-    	sliderSize();
-    });
+	$(window).on("resize", function(event){
+		sliderSize();
+	});
 
 	// jQuery('#slides').on('animated.slides', function () {
 	// 	if ($('li').is(":visible") ){
 	// 		$(this).addClass('current');
 	// 	}
 	// });
-
+	// }
 
 
 

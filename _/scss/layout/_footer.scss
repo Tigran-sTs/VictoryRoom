@@ -13,53 +13,108 @@ footer {width:100%;
 	.payMethods, .partners{float:left;width:75%;
 		.title{font-size:12px;text-transform:uppercase;line-height:100%}
 		ol{float: left;
-			li{float: left;margin-right:40px;
+			li{float: left;margin-right:40px;margin-top:10px;
 			}
 		}
 	}
-	.payMethods ol li i{float: left;background-image:url(../img/payment-methods/all.png);background-repeat:no-repeat;height:44px;animation-name:opacityOnHoverBack;animation-timing-function:ease-in-out;animation-duration:.2s;
-		&:hover{animation-name:opacityOnHover;animation-timing-function:ease-in-out;animation-duration:.2s;}
-		&.visa{background-position:0 0;width:57px;
-			&:hover{background-position:0 -52px;}
+	.payMethods ol li i{float: left;position: relative;height: 44px;
+		&:after{content:"";background-image:url(../img/payment-methods/all.png);background-repeat:no-repeat;height:44px;position: absolute;top: 0;left: 0;z-index: 0;opacity:1;transition:.4s all;}
+		&:before{content:"";background-image:url(../img/payment-methods/all.png);background-repeat:no-repeat;height:44px;position: absolute;top: 0;left: 0;z-index: 1;transition:.4s all;opacity: 0}
+		&:hover:before{opacity: 1}
+		&:hover:after{opacity:0}
+		&.visa{width:57px;
+			&:after{width:57px;background-position:0 0;}
+			&:before{background-position:0 -50px;width:57px;}
+			&:hover:after{width:57px;}
+			&:hover:before{}
 		}
-		&.masterCard{background-position:-111px 0;width:62px;
-			&:hover{background-position:-111px -50px;}
+		&.masterCard{width:62px;
+			&:after{width:62px;background-position::-111px 0;}
+			&:before{background-position:-111px -50px;width:62px;}
+			&:hover:after{width:62px;}
+			&:hover:before{}
 		}
-		&.skrill{background-position:-230px 0;width:57px;
-			&:hover{background-position:-230px -51px;}
+		&.skrill{width:57px;
+			&:after{width:57px;background-position:-230px 0;}
+			&:before{background-position:-230px -50px;width:57px;}
+			&:hover:after{width:57px;}
+			&:hover:before{}
 		}
-		&.neteller{background-position:-342px 0;width:94px;
-			&:hover{background-position:-342px -51px;}
+		&.neteller{width:94px;
+			&:after{width:94px;background-position:-342px 0;}
+			&:before{background-position:-342px -50px;width:94px;}
+			&:hover:after{width:94px;}
+			&:hover:before{}
 		}
-		&.qiwi{background-position:-481px 0;width:91px;
-			&:hover{background-position:-481px -51px;}
+		&.qiwi{width:91px;
+			&:after{width:91px;background-position:-481px 0;}
+			&:before{background-position:-481px -50px;width:91px;}
+			&:hover:after{width:91px;}
+			&:hover:before{}
 		}
-		&.webMoney{background-position:-617px 0;width:101px;
-			&:hover{background-position:-617px -51px;}
+		&.webMoney{width:101px;
+			&:after{width:101px;background-position:-617px 0;}
+			&:before{background-position:-617px -50px;width:101px;}
+			&:hover:after{width:101px;}
+			&:hover:before{}
 		}
-		&.ecoPays{background-position:-758px 0;width:84px;
-			&:hover{background-position:-758px -51px;}
+		&.ecoPays{width:84px;
+			&:after{width:84px;background-position:-758px 0;}
+			&:before{background-position:-758px -50px;width:84px;}
+			&:hover:after{width:84px;}
+			&:hover:before{}
 		}
-		&.beeline{background-position:-899px 0;width:115px;
-			&:hover{background-position:-899px -51px;}
+		&.paySafeCard{width:113px;
+			&:after{width:113px;background-position:-899px 3px;}
+			&:before{background-position:-899px -47px;width:113px;}
+			&:hover:after{width:113px;}
+			&:hover:before{}
 		}
 	}
-	.partners{width:20%;margin-left:5%;}
+	.partners{width:20%;margin-left:5%;
+		ol li{margin-top:5px;}
+	}
+	.secRow{float: left;width:100%;color:$title2ndC;margin:0 0 10px 0;
+		.left{float: left;width:75%;}
+		.social{float: left;width:20%;margin-left:5%;}
+		small{font-size: 12px;width:70%;float: left;
+			span{color:$titleC;display:block;}
+			em{font-style:normal;color:$titleC}
+		}
+		.ratedR{border-radius:50%;font-size:18px;font-style:normal;border:1px solid $title2ndC;width:48px;height:48px;float: left;cursor:default;line-height: 44px;text-indent:6px;margin:8px 0 0 0}
+		.social{float: left;width:20%;margin-left:5%;
+			a{border-radius: 50%;color:$iconC;font-size:18px;border: 1px $iconC solid;width: 37px;height:37px;background-color:$backgroundC;margin:13px 10px 0 0;transition:.25s all;
+				&:before{position: relative;text-align: center;display: block;vertical-align: middle;top:9px;}
+				&.socicon-twitter:hover{color:#3A589E;border-color:#3A589E;box-shadow:0 0 5px #3A589E}
+				&.socicon-facebook:hover{color:#55ACEE;border-color:#55ACEE;box-shadow:0 0 5px #55ACEE}
+				&.socicon-google:hover{color:#D6492F;border-color:#D6492F;box-shadow:0 0 5px #D6492F}
+				&.socicon-youtube:hover{color:#DF192A;border-color:#DF192A;box-shadow:0 0 5px #DF192A}
+				&.socicon-linkedin:hover{color:#007BB6;border-color:#007BB6;box-shadow:0 0 5px #007BB6}
+			}
+		}
+	}
+	.license{float: left;width: 100%;text-align: center;margin: 0 0 50px 0;
+		.title{font-size:14px;padding-bottom:10px;padding-top:10px}
+		p{color:$titleC;}
+	}
+
 
 	@keyframes opacityOnHover {
 	    from, to {
-	        transform:scale(.9);
+	        opacity: 1;
+	        // transform: scale(.9);
 	    }
 	    100% {
-	        transform:scale(1);
+	        opacity: 1;
+	        // transform: scale(1);
 	    }
 	}
 	@keyframes opacityOnHoverBack {
 	    from, to {
-	        transform:scale(.9);
+	        opacity: 1;
 	    }
 	    100% {
-	        transform:scale(1);
+	        opacity: 0;
 
 	    }
 	}	

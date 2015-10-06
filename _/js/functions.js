@@ -15,7 +15,30 @@ jQuery(function($) {
         $(this).toggleClass("hover");
     });
 
-    // 
+
+	// Magnific Popup
+	$('a.lightbox').magnificPopup({ 
+	    type: 'ajax',  
+	    removalDelay: 300,
+	    mainClass: 'mfp-fade',
+	    closeBtnInside:true,
+	    closeOnBgClick:true,
+	    midClick: true,
+	    disableOn: function() {
+	      if( $(window).width() < 786 ) {
+	        return false;
+	      } 
+	      return true;
+	    },
+	    callbacks: {
+		    ajaxContentAdded: function(){
+		        this.content.find('.close.btn').on('click',function(){
+		           $('.mfp-close').click();
+		        });
+		    }
+		}
+	});	
+
     
 
 	// $('#slides').superslides({

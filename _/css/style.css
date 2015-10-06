@@ -216,6 +216,9 @@ nav a {
   font-family: 'Raleway';
   font-weight: 500; }
 
+p {
+  color: #9d9d9d; }
+
 body {
   min-width: 320px; }
 
@@ -229,8 +232,57 @@ header .wrap {
   height: 100%; }
 
 .container {
-  width: 1310px;
+  max-width: 1310px;
   margin: 0 auto; }
+
+@font-face {
+  font-family: 'socicon';
+  src: url("../fonts/socicon.eot");
+  src: url("../fonts/socicon.eot?#iefix") format("embedded-opentype"), url("../fonts/socicon.woff") format("woff"), url("../fonts/socicon.woff2") format("woff2"), url("../fonts/socicon.ttf") format("truetype"), url("../fonts/socicon.svg#sociconregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  text-transform: initial; }
+
+[class^="socicon-"], [class*=" socicon-"] {
+  /* Change to your class name, eg: icon, socicon, social... */
+  font-family: 'socicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.socicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'socicon';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+.socicon:empty {
+  width: 1em; }
+
+.socicon-twitter:before {
+  content: "a"; }
+
+.socicon-facebook:before {
+  content: "b"; }
+
+.socicon-google:before {
+  content: "c"; }
+
+.socicon-linkedin:before {
+  content: "j"; }
+
+.socicon-youtube:before {
+  content: "r"; }
 
 .transit04, header nav a, header nav a:before, header .acc .lang, header .btn.registerC, header .btn.loginC, footer .links p a {
   transition: .25s all; }
@@ -310,11 +362,11 @@ select {
 
 /* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
 ::-moz-selection {
-  background: rgba(25, 25, 25, 0.1);
+  background: rgba(25, 25, 25, 0.3);
   text-shadow: none; }
 
 ::selection {
-  background: rgba(25, 25, 25, 0.1);
+  background: rgba(25, 25, 25, 0.3);
   text-shadow: none; }
 
 /*	j.mp/webkit-tap-highlight-color */
@@ -339,9 +391,6 @@ ul {
 label {
   color: #6b7684;
   cursor: default; }
-
-p {
-  color: #9d9d9d; }
 
 header {
   width: 100%;
@@ -538,71 +587,128 @@ footer {
       float: left; }
       footer .payMethods ol li, footer .partners ol li {
         float: left;
-        margin-right: 40px; }
+        margin-right: 40px;
+        margin-top: 10px; }
   footer .payMethods ol li i {
     float: left;
-    background-image: url(../img/payment-methods/all.png);
-    background-repeat: no-repeat;
-    height: 44px;
-    position: relative; }
-    footer .payMethods ol li i:before {
-      animation-name: opacityOnHover;
-      animation-timing-function: ease-in-out;
-      animation-duration: .2s;
+    position: relative;
+    height: 44px; }
+    footer .payMethods ol li i:after {
+      content: "";
       background-image: url(../img/payment-methods/all.png);
       background-repeat: no-repeat;
       height: 44px;
       position: absolute;
+      top: 0;
       left: 0;
-      top: 0; }
+      z-index: 0;
+      opacity: 1;
+      transition: .4s all; }
+    footer .payMethods ol li i:before {
+      content: "";
+      background-image: url(../img/payment-methods/all.png);
+      background-repeat: no-repeat;
+      height: 44px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      transition: .4s all;
+      opacity: 0; }
+    footer .payMethods ol li i:hover:before {
+      opacity: 1; }
+    footer .payMethods ol li i:hover:after {
+      opacity: 0; }
     footer .payMethods ol li i.visa {
-      background-position: 0 0;
       width: 57px; }
-      footer .payMethods ol li i.visa:hover {
-        background-position: 0 -52px; }
+      footer .payMethods ol li i.visa:after {
+        width: 57px;
+        background-position: 0 0; }
+      footer .payMethods ol li i.visa:before {
+        background-position: 0 -50px;
+        width: 57px; }
+      footer .payMethods ol li i.visa:hover:after {
+        width: 57px; }
     footer .payMethods ol li i.masterCard {
-      background-position: -111px 0;
       width: 62px; }
-      footer .payMethods ol li i.masterCard:hover {
-        background-position: -111px -50px; }
+      footer .payMethods ol li i.masterCard:after {
+        width: 62px;
+        background-position: -111px 0; }
+      footer .payMethods ol li i.masterCard:before {
+        background-position: -111px -50px;
+        width: 62px; }
+      footer .payMethods ol li i.masterCard:hover:after {
+        width: 62px; }
     footer .payMethods ol li i.skrill {
-      background-position: -230px 0;
       width: 57px; }
-      footer .payMethods ol li i.skrill:hover {
-        background-position: -230px -51px; }
+      footer .payMethods ol li i.skrill:after {
+        width: 57px;
+        background-position: -230px 0; }
+      footer .payMethods ol li i.skrill:before {
+        background-position: -230px -50px;
+        width: 57px; }
+      footer .payMethods ol li i.skrill:hover:after {
+        width: 57px; }
     footer .payMethods ol li i.neteller {
-      background-position: -342px 0;
       width: 94px; }
-      footer .payMethods ol li i.neteller:hover {
-        background-position: -342px -49px; }
+      footer .payMethods ol li i.neteller:after {
+        width: 94px;
+        background-position: -342px 0; }
+      footer .payMethods ol li i.neteller:before {
+        background-position: -342px -50px;
+        width: 94px; }
+      footer .payMethods ol li i.neteller:hover:after {
+        width: 94px; }
     footer .payMethods ol li i.qiwi {
-      background-position: -481px 0;
       width: 91px; }
-      footer .payMethods ol li i.qiwi:hover {
-        background-position: -481px -49px; }
+      footer .payMethods ol li i.qiwi:after {
+        width: 91px;
+        background-position: -481px 0; }
+      footer .payMethods ol li i.qiwi:before {
+        background-position: -481px -50px;
+        width: 91px; }
+      footer .payMethods ol li i.qiwi:hover:after {
+        width: 91px; }
     footer .payMethods ol li i.webMoney {
-      background-position: -617px 0;
       width: 101px; }
-      footer .payMethods ol li i.webMoney:hover {
-        background-position: -617px -49px; }
+      footer .payMethods ol li i.webMoney:after {
+        width: 101px;
+        background-position: -617px 0; }
+      footer .payMethods ol li i.webMoney:before {
+        background-position: -617px -50px;
+        width: 101px; }
+      footer .payMethods ol li i.webMoney:hover:after {
+        width: 101px; }
     footer .payMethods ol li i.ecoPays {
-      background-position: -758px 0;
       width: 84px; }
-      footer .payMethods ol li i.ecoPays:hover {
-        background-position: -758px -51px; }
-    footer .payMethods ol li i.beeline {
-      background-position: -899px 0;
-      width: 115px; }
-      footer .payMethods ol li i.beeline:hover {
-        background-position: -899px -50px; }
+      footer .payMethods ol li i.ecoPays:after {
+        width: 84px;
+        background-position: -758px 0; }
+      footer .payMethods ol li i.ecoPays:before {
+        background-position: -758px -50px;
+        width: 84px; }
+      footer .payMethods ol li i.ecoPays:hover:after {
+        width: 84px; }
+    footer .payMethods ol li i.paySafeCard {
+      width: 113px; }
+      footer .payMethods ol li i.paySafeCard:after {
+        width: 113px;
+        background-position: -899px 3px; }
+      footer .payMethods ol li i.paySafeCard:before {
+        background-position: -899px -47px;
+        width: 113px; }
+      footer .payMethods ol li i.paySafeCard:hover:after {
+        width: 113px; }
   footer .partners {
     width: 20%;
     margin-left: 5%; }
+    footer .partners ol li {
+      margin-top: 5px; }
   footer .secRow {
     float: left;
     width: 100%;
     color: #484F5E;
-    margin: 10px 0; }
+    margin: 0 0 10px 0; }
     footer .secRow .left {
       float: left;
       width: 75%; }
@@ -617,6 +723,9 @@ footer {
       footer .secRow small span {
         color: #727888;
         display: block; }
+      footer .secRow small em {
+        font-style: normal;
+        color: #727888; }
     footer .secRow .ratedR {
       border-radius: 50%;
       font-size: 18px;
@@ -629,6 +738,46 @@ footer {
       line-height: 44px;
       text-indent: 6px;
       margin: 8px 0 0 0; }
+    footer .secRow .social {
+      float: left;
+      width: 20%;
+      margin-left: 5%; }
+      footer .secRow .social a {
+        border-radius: 50%;
+        color: #727787;
+        font-size: 18px;
+        border: 1px #727787 solid;
+        width: 37px;
+        height: 37px;
+        background-color: #121623;
+        margin: 13px 10px 0 0;
+        transition: .25s all; }
+        footer .secRow .social a:before {
+          position: relative;
+          text-align: center;
+          display: block;
+          vertical-align: middle;
+          top: 9px; }
+        footer .secRow .social a.socicon-twitter:hover {
+          color: #3A589E;
+          border-color: #3A589E;
+          box-shadow: 0 0 5px #3A589E; }
+        footer .secRow .social a.socicon-facebook:hover {
+          color: #55ACEE;
+          border-color: #55ACEE;
+          box-shadow: 0 0 5px #55ACEE; }
+        footer .secRow .social a.socicon-google:hover {
+          color: #D6492F;
+          border-color: #D6492F;
+          box-shadow: 0 0 5px #D6492F; }
+        footer .secRow .social a.socicon-youtube:hover {
+          color: #DF192A;
+          border-color: #DF192A;
+          box-shadow: 0 0 5px #DF192A; }
+        footer .secRow .social a.socicon-linkedin:hover {
+          color: #007BB6;
+          border-color: #007BB6;
+          box-shadow: 0 0 5px #007BB6; }
   footer .license {
     float: left;
     width: 100%;
@@ -643,15 +792,15 @@ footer {
 
 @keyframes opacityOnHover {
   from, to {
-    opacity: 0; }
+    opacity: 1; }
   100% {
     opacity: 1; } }
 
 @keyframes opacityOnHoverBack {
   from, to {
-    opacity: 0; }
+    opacity: 1; }
   100% {
-    opacity: 1; } }
+    opacity: 0; } }
 
 /* Slider */
 .slick-slider {
@@ -731,7 +880,8 @@ footer {
 .slideWrap {
   position: relative;
   z-index: 1;
-  overflow: hidden; }
+  overflow: hidden;
+  border-bottom: 1px #272C37 solid; }
 
 .slick-slide img {
   min-width: 1920px; }
@@ -832,10 +982,8 @@ footer {
   position: relative;
   overflow: hidden; }
 
-.landingPage footer {
-  border-top: #161B2B solid 15px; }
-  .landingPage footer .container {
-    border: none; }
+.landingPage footer .container {
+  border: none; }
 
 .slick-active img {
   animation-name: bounce-background;
@@ -848,3 +996,6 @@ footer {
     transform: scale(1); }
   50% {
     transform: scale(1.15); } }
+
+.reg {
+  content: ""; }

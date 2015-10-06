@@ -13,6 +13,7 @@
 // Layouts
 @import "layout/header";
 @import "layout/footer";
+@import "layout/lightbox";
 
 // Themes
 @import "themes/theme";
@@ -26,6 +27,7 @@
 
 // Vendors 
 @import "vendors/slick.scss";
+@import "vendors/magnific-popup";
 
 // Pages
 @import "pages/home";

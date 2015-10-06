@@ -17,8 +17,9 @@ footer {width:100%;
 			}
 		}
 	}
-	.payMethods ol li i{float: left;background-image:url(../img/payment-methods/all.png);background-repeat:no-repeat;height:44px;animation-name:opacityOnHoverBack;animation-timing-function:ease-in-out;animation-duration:.2s;
-		&:hover{animation-name:opacityOnHover;animation-timing-function:ease-in-out;animation-duration:.2s;}
+	.payMethods ol li i{float: left;background-image:url(../img/payment-methods/all.png);background-repeat:no-repeat;height:44px;position: relative;
+		&:hover{}
+		&:before{animation-name:opacityOnHover;animation-timing-function:ease-in-out;animation-duration:.2s;background-image:url(../img/payment-methods/all.png);background-repeat:no-repeat;height:44px;position: absolute;left: 0;top:0}
 		&.visa{background-position:0 0;width:57px;
 			&:hover{background-position:0 -52px;}
 		}
@@ -29,37 +30,49 @@ footer {width:100%;
 			&:hover{background-position:-230px -51px;}
 		}
 		&.neteller{background-position:-342px 0;width:94px;
-			&:hover{background-position:-342px -51px;}
+			&:hover{background-position:-342px -49px;}
 		}
 		&.qiwi{background-position:-481px 0;width:91px;
-			&:hover{background-position:-481px -51px;}
+			&:hover{background-position:-481px -49px;}
 		}
 		&.webMoney{background-position:-617px 0;width:101px;
-			&:hover{background-position:-617px -51px;}
+			&:hover{background-position:-617px -49px;}
 		}
 		&.ecoPays{background-position:-758px 0;width:84px;
 			&:hover{background-position:-758px -51px;}
 		}
 		&.beeline{background-position:-899px 0;width:115px;
-			&:hover{background-position:-899px -51px;}
+			&:hover{background-position:-899px -50px;}
 		}
 	}
 	.partners{width:20%;margin-left:5%;}
+	.secRow{float: left;width:100%;color:$title2ndC;margin:10px 0;
+		.left{float: left;width:75%;}
+		.social{float: left;width:20%;margin-left:5%;}
+		small{font-size: 12px;width:70%;float: left;
+			span{color:$titleC;display:block;}
+		}
+		.ratedR{border-radius:50%;font-size:18px;font-style:normal;border:1px solid $title2ndC;width:48px;height:48px;float: left;cursor:default;line-height: 44px;text-indent:6px;margin:8px 0 0 0}
+	}
+	.license{float: left;width: 100%;text-align: center;margin: 0 0 50px 0;
+		.title{font-size:14px;padding-bottom:10px;padding-top:10px }
+		p{color:$titleC;}
+	}
 
 	@keyframes opacityOnHover {
 	    from, to {
-	        transform:scale(.9);
+	        opacity: 0;
 	    }
 	    100% {
-	        transform:scale(1);
+	        opacity: 1;
 	    }
 	}
 	@keyframes opacityOnHoverBack {
 	    from, to {
-	        transform:scale(.9);
+	        opacity: 0;
 	    }
 	    100% {
-	        transform:scale(1);
+	        opacity: 1;
 
 	    }
 	}	

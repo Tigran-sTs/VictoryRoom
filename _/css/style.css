@@ -199,7 +199,7 @@ input[type=button] {
   zoom: 1; }
 
 body {
-  font: 14px/200% "Roboto", Arial, Helvetica; }
+  font: 14px/150% "Roboto", Arial, Helvetica; }
 
 h1,
 h2,
@@ -544,13 +544,17 @@ footer {
     background-image: url(../img/payment-methods/all.png);
     background-repeat: no-repeat;
     height: 44px;
-    animation-name: opacityOnHoverBack;
-    animation-timing-function: ease-in-out;
-    animation-duration: .2s; }
-    footer .payMethods ol li i:hover {
+    position: relative; }
+    footer .payMethods ol li i:before {
       animation-name: opacityOnHover;
       animation-timing-function: ease-in-out;
-      animation-duration: .2s; }
+      animation-duration: .2s;
+      background-image: url(../img/payment-methods/all.png);
+      background-repeat: no-repeat;
+      height: 44px;
+      position: absolute;
+      left: 0;
+      top: 0; }
     footer .payMethods ol li i.visa {
       background-position: 0 0;
       width: 57px; }
@@ -570,17 +574,17 @@ footer {
       background-position: -342px 0;
       width: 94px; }
       footer .payMethods ol li i.neteller:hover {
-        background-position: -342px -51px; }
+        background-position: -342px -49px; }
     footer .payMethods ol li i.qiwi {
       background-position: -481px 0;
       width: 91px; }
       footer .payMethods ol li i.qiwi:hover {
-        background-position: -481px -51px; }
+        background-position: -481px -49px; }
     footer .payMethods ol li i.webMoney {
       background-position: -617px 0;
       width: 101px; }
       footer .payMethods ol li i.webMoney:hover {
-        background-position: -617px -51px; }
+        background-position: -617px -49px; }
     footer .payMethods ol li i.ecoPays {
       background-position: -758px 0;
       width: 84px; }
@@ -590,22 +594,64 @@ footer {
       background-position: -899px 0;
       width: 115px; }
       footer .payMethods ol li i.beeline:hover {
-        background-position: -899px -51px; }
+        background-position: -899px -50px; }
   footer .partners {
     width: 20%;
     margin-left: 5%; }
+  footer .secRow {
+    float: left;
+    width: 100%;
+    color: #484F5E;
+    margin: 10px 0; }
+    footer .secRow .left {
+      float: left;
+      width: 75%; }
+    footer .secRow .social {
+      float: left;
+      width: 20%;
+      margin-left: 5%; }
+    footer .secRow small {
+      font-size: 12px;
+      width: 70%;
+      float: left; }
+      footer .secRow small span {
+        color: #727888;
+        display: block; }
+    footer .secRow .ratedR {
+      border-radius: 50%;
+      font-size: 18px;
+      font-style: normal;
+      border: 1px solid #484F5E;
+      width: 48px;
+      height: 48px;
+      float: left;
+      cursor: default;
+      line-height: 44px;
+      text-indent: 6px;
+      margin: 8px 0 0 0; }
+  footer .license {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 50px 0; }
+    footer .license .title {
+      font-size: 14px;
+      padding-bottom: 10px;
+      padding-top: 10px; }
+    footer .license p {
+      color: #727888; }
 
 @keyframes opacityOnHover {
   from, to {
-    transform: scale(0.9); }
+    opacity: 0; }
   100% {
-    transform: scale(1); } }
+    opacity: 1; } }
 
 @keyframes opacityOnHoverBack {
   from, to {
-    transform: scale(0.9); }
+    opacity: 0; }
   100% {
-    transform: scale(1); } }
+    opacity: 1; } }
 
 /* Slider */
 .slick-slider {

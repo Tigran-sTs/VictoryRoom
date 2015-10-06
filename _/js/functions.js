@@ -52,7 +52,6 @@ jQuery(function($) {
 	});
 
 var sliderSize = function(){ 
-
 	//fit slider image on window height
 		var sliderHeight = $(window).height();
 		$('#slides').css('height', sliderHeight);

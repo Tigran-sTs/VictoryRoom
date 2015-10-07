@@ -1,14 +1,14 @@
 .slideWrap{position:relative;z-index:1;overflow:hidden;border-bottom: 1px #272C37 solid;}
 .slick-slide img{min-width:1920px;}
 .slick-dots{position: absolute; right: 5%;left: auto;bottom: 50px;z-index: 5;text-indent: -9999px;
-	 li{border-radius:50%;width:12px;height:12px;background:#61666A;opacity:.8;float:left;margin-left:3px;cursor:pointer;outline:hidden;border:none;}
+	 li{border-radius:50%;width:12px;height:12px;background:#61666A;opacity:.8;float:left;margin-left:3px;cursor:pointer;border:none;}
 	 li.slick-active{background-color:$btn2C}
 }
 .slides-container{position:relative}
 .details{width:50%;left:10%;bottom:30%;position:absolute;}
 .details h2{color:$brightFontC;font-size:48px;text-transform:uppercase;line-height:120%;font-weight:500;transition:1s all;transform:translate(0,-40px);opacity:0}
-.details a.btn{color:$brightFontC;background:$btnC;width:240px;height:60px;font-size: 22px;float: left;text-align:center;border-radius:$borderBR6;line-height:60px;margin:25px 0 0 -5px;transition:1s all;transform:translate(40px,0);opacity:0}
-.details p.login{color:$brightFontC;font-size:18px;clear:both;margin:5px 0 0 0;font-weight:400;float: left;transition:1s all;transform:translate(40px,0);opacity:0}
+.details a.btn{color:$brightFontC;background:$btnC;width:240px;height:60px;font-size: 22px;float: left;text-align:center;border-radius:$borderBR6;line-height:60px;margin:25px 0 0 0;transition:1s all;transform:translate(40px,0);opacity:0}
+.details p.login{color:$brightFontC;font-size:18px;clear:both;margin:15px 0 0 0;font-weight:400;float: left;transition:1s all;transform:translate(40px,0);opacity:0}
 .details p.login a{color:$btn2C;margin-left:10px;border-bottom:1px $btn2C solid;padding-bottom:0px;transition:1s all;transform:translate(40px,0);}
 .slick-active .details h2{transform:translate(0,0);transition-delay:.40s;opacity:1}
 .slick-active .details .btn{transform:translate(0,0);transition-delay:0.60s;opacity:1;border-radius:0;text-shadow:0 0 1px #555;}

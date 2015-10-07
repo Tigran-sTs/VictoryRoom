@@ -581,22 +581,42 @@ footer {
     margin-top: 10px; }
   footer .payMethods, footer .partners {
     float: left;
-    width: 75%; }
+    width: 75%;
+    position: relative; }
     footer .payMethods .title, footer .partners .title {
       font-size: 12px;
       text-transform: uppercase;
       line-height: 100%; }
-    footer .payMethods ol, footer .partners ol {
+    footer .payMethods .arrow, footer .partners .arrow {
+      background-image: url(../img/icons/sprite.png);
+      background-position: -66px 0;
+      width: 29px;
+      height: 34px;
+      cursor: pointer;
+      position: absolute;
+      right: -8px;
+      top: 47px;
+      transition: .4s all; }
+      footer .payMethods .arrow:hover, footer .partners .arrow:hover {
+        right: -12px; }
+    footer .payMethods ul, footer .payMethods .slider, footer .partners ul, footer .partners .slider {
       float: left; }
-      footer .payMethods ol li, footer .partners ol li {
+      footer .payMethods ul li, footer .payMethods .slider li, footer .partners ul li, footer .partners .slider li {
         float: left;
         margin-right: 40px;
         margin-top: 10px; }
-  footer .payMethods ol li i {
+  footer .slick-initialized {
+    width: 98%;
+    margin: 0;
+    height: 59px;
+    overflow: hidden; }
+  footer .slick-list {
+    width: 100%; }
+  footer .payMethods .slider li i {
     float: left;
     position: relative;
     height: 44px; }
-    footer .payMethods ol li i:after {
+    footer .payMethods .slider li i:after {
       content: "";
       background-image: url(../img/payment-methods/all.png);
       background-repeat: no-repeat;
@@ -607,7 +627,7 @@ footer {
       z-index: 0;
       opacity: 1;
       transition: .4s all; }
-    footer .payMethods ol li i:before {
+    footer .payMethods .slider li i:before {
       content: "";
       background-image: url(../img/payment-methods/all.png);
       background-repeat: no-repeat;
@@ -618,95 +638,162 @@ footer {
       z-index: 1;
       transition: .4s all;
       opacity: 0; }
-    footer .payMethods ol li i:hover:before {
+    footer .payMethods .slider li i:hover:before {
       opacity: 1; }
-    footer .payMethods ol li i:hover:after {
+    footer .payMethods .slider li i:hover:after {
       opacity: 0; }
-    footer .payMethods ol li i.visa {
+    footer .payMethods .slider li i.visa {
       width: 57px; }
-      footer .payMethods ol li i.visa:after {
+      footer .payMethods .slider li i.visa:after {
         width: 57px;
         background-position: 0 0; }
-      footer .payMethods ol li i.visa:before {
+      footer .payMethods .slider li i.visa:before {
         background-position: 0 -50px;
         width: 57px; }
-      footer .payMethods ol li i.visa:hover:after {
+      footer .payMethods .slider li i.visa:hover:after {
         width: 57px; }
-    footer .payMethods ol li i.masterCard {
+    footer .payMethods .slider li i.masterCard {
       width: 62px; }
-      footer .payMethods ol li i.masterCard:after {
+      footer .payMethods .slider li i.masterCard:after {
         width: 62px;
         background-position: -111px 0; }
-      footer .payMethods ol li i.masterCard:before {
+      footer .payMethods .slider li i.masterCard:before {
         background-position: -111px -50px;
         width: 62px; }
-      footer .payMethods ol li i.masterCard:hover:after {
+      footer .payMethods .slider li i.masterCard:hover:after {
         width: 62px; }
-    footer .payMethods ol li i.skrill {
+    footer .payMethods .slider li i.skrill {
       width: 57px; }
-      footer .payMethods ol li i.skrill:after {
+      footer .payMethods .slider li i.skrill:after {
         width: 57px;
         background-position: -230px 0; }
-      footer .payMethods ol li i.skrill:before {
+      footer .payMethods .slider li i.skrill:before {
         background-position: -230px -50px;
         width: 57px; }
-      footer .payMethods ol li i.skrill:hover:after {
+      footer .payMethods .slider li i.skrill:hover:after {
         width: 57px; }
-    footer .payMethods ol li i.neteller {
+    footer .payMethods .slider li i.neteller {
       width: 94px; }
-      footer .payMethods ol li i.neteller:after {
+      footer .payMethods .slider li i.neteller:after {
         width: 94px;
         background-position: -342px 0; }
-      footer .payMethods ol li i.neteller:before {
+      footer .payMethods .slider li i.neteller:before {
         background-position: -342px -50px;
         width: 94px; }
-      footer .payMethods ol li i.neteller:hover:after {
+      footer .payMethods .slider li i.neteller:hover:after {
         width: 94px; }
-    footer .payMethods ol li i.qiwi {
+    footer .payMethods .slider li i.qiwi {
       width: 91px; }
-      footer .payMethods ol li i.qiwi:after {
+      footer .payMethods .slider li i.qiwi:after {
         width: 91px;
-        background-position: -481px 0; }
-      footer .payMethods ol li i.qiwi:before {
-        background-position: -481px -50px;
+        background-position: -481px 5px; }
+      footer .payMethods .slider li i.qiwi:before {
+        background-position: -481px -45px;
         width: 91px; }
-      footer .payMethods ol li i.qiwi:hover:after {
+      footer .payMethods .slider li i.qiwi:hover:after {
         width: 91px; }
-    footer .payMethods ol li i.webMoney {
+    footer .payMethods .slider li i.webMoney {
       width: 101px; }
-      footer .payMethods ol li i.webMoney:after {
+      footer .payMethods .slider li i.webMoney:after {
         width: 101px;
         background-position: -617px 0; }
-      footer .payMethods ol li i.webMoney:before {
+      footer .payMethods .slider li i.webMoney:before {
         background-position: -617px -50px;
         width: 101px; }
-      footer .payMethods ol li i.webMoney:hover:after {
+      footer .payMethods .slider li i.webMoney:hover:after {
         width: 101px; }
-    footer .payMethods ol li i.ecoPays {
+    footer .payMethods .slider li i.ecoPays {
       width: 84px; }
-      footer .payMethods ol li i.ecoPays:after {
+      footer .payMethods .slider li i.ecoPays:after {
         width: 84px;
         background-position: -758px 0; }
-      footer .payMethods ol li i.ecoPays:before {
+      footer .payMethods .slider li i.ecoPays:before {
         background-position: -758px -50px;
         width: 84px; }
-      footer .payMethods ol li i.ecoPays:hover:after {
+      footer .payMethods .slider li i.ecoPays:hover:after {
         width: 84px; }
-    footer .payMethods ol li i.paySafeCard {
+    footer .payMethods .slider li i.paySafeCard {
       width: 113px; }
-      footer .payMethods ol li i.paySafeCard:after {
+      footer .payMethods .slider li i.paySafeCard:after {
         width: 113px;
         background-position: -899px 3px; }
-      footer .payMethods ol li i.paySafeCard:before {
+      footer .payMethods .slider li i.paySafeCard:before {
         background-position: -899px -47px;
         width: 113px; }
-      footer .payMethods ol li i.paySafeCard:hover:after {
+      footer .payMethods .slider li i.paySafeCard:hover:after {
         width: 113px; }
   footer .partners {
     width: 20%;
     margin-left: 5%; }
-    footer .partners ol li {
-      margin-top: 5px; }
+    footer .partners ul li {
+      margin-top: 3px;
+      float: left; }
+      footer .partners ul li i {
+        float: left;
+        position: relative;
+        height: 44px; }
+        footer .partners ul li i:after {
+          content: "";
+          height: 44px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 0;
+          opacity: 1;
+          transition: .4s all; }
+        footer .partners ul li i:before {
+          content: "";
+          height: 44px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          transition: .4s all;
+          opacity: 0; }
+        footer .partners ul li i:hover:before {
+          opacity: 1; }
+        footer .partners ul li i:hover:after {
+          opacity: 0; }
+        footer .partners ul li i.betSoft {
+          width: 93px; }
+          footer .partners ul li i.betSoft:after {
+            width: 93px;
+            background-image: url(../img/partners/betsoft.png);
+            background-repeat: no-repeat;
+            background-position: 0 3px; }
+          footer .partners ul li i.betSoft:before {
+            background-image: url(../img/partners/betsoft.png);
+            background-position: 0 -43px;
+            width: 93px; }
+          footer .partners ul li i.betSoft:hover:after {
+            width: 93px; }
+        footer .partners ul li i.netEnt {
+          width: 79px; }
+          footer .partners ul li i.netEnt:after {
+            width: 79px;
+            background-image: url(../img/partners/netent.png);
+            background-repeat: no-repeat; }
+          footer .partners ul li i.netEnt:before {
+            background-image: url(../img/partners/netent.png);
+            background-position: 0 -44px;
+            width: 79px; }
+          footer .partners ul li i.netEnt:hover:after {
+            width: 79px; }
+        footer .partners ul li i.microgaming {
+          width: 129px; }
+          footer .partners ul li i.microgaming:after {
+            width: 129px;
+            background-image: url(../img/partners/microgaming.png);
+            background-repeat: no-repeat;
+            background-position: 0 5px; }
+          footer .partners ul li i.microgaming:before {
+            background-image: url(../img/partners/microgaming.png);
+            background-position: 0 -42px;
+            width: 129px; }
+          footer .partners ul li i.microgaming:hover:after {
+            width: 129px; }
+      footer .partners ul li:last-child {
+        margin-right: 0; }
   footer .secRow {
     float: left;
     width: 100%;
@@ -753,7 +840,7 @@ footer {
         width: 37px;
         height: 37px;
         background-color: #121623;
-        margin: 13px 10px 0 0;
+        margin: 13px 5.7% 0 0;
         transition: .25s all; }
         footer .secRow .social a:before {
           position: relative;
@@ -761,26 +848,33 @@ footer {
           display: block;
           vertical-align: middle;
           top: 9px; }
-        footer .secRow .social a.socicon-twitter:hover {
-          color: #3A589E;
-          border-color: #3A589E;
-          box-shadow: 0 0 5px #3A589E; }
-        footer .secRow .social a.socicon-facebook:hover {
+        footer .secRow .social a.socicon-twitter {
           color: #55ACEE;
-          border-color: #55ACEE;
-          box-shadow: 0 0 5px #55ACEE; }
-        footer .secRow .social a.socicon-google:hover {
+          border-color: #55ACEE; }
+          footer .secRow .social a.socicon-twitter:hover {
+            box-shadow: 0 0 5px #55ACEE; }
+        footer .secRow .social a.socicon-facebook {
+          color: #3A589E;
+          border-color: #3A589E; }
+          footer .secRow .social a.socicon-facebook:hover {
+            box-shadow: 0 0 5px #3A589E; }
+        footer .secRow .social a.socicon-google {
           color: #D6492F;
-          border-color: #D6492F;
-          box-shadow: 0 0 5px #D6492F; }
-        footer .secRow .social a.socicon-youtube:hover {
+          border-color: #D6492F; }
+          footer .secRow .social a.socicon-google:hover {
+            box-shadow: 0 0 5px #D6492F; }
+        footer .secRow .social a.socicon-youtube {
           color: #DF192A;
-          border-color: #DF192A;
-          box-shadow: 0 0 5px #DF192A; }
-        footer .secRow .social a.socicon-linkedin:hover {
+          border-color: #DF192A; }
+          footer .secRow .social a.socicon-youtube:hover {
+            box-shadow: 0 0 5px #DF192A; }
+        footer .secRow .social a.socicon-linkedin {
           color: #007BB6;
-          border-color: #007BB6;
-          box-shadow: 0 0 5px #007BB6; }
+          border-color: #007BB6; }
+          footer .secRow .social a.socicon-linkedin:hover {
+            box-shadow: 0 0 5px #007BB6; }
+        footer .secRow .social a:last-child {
+          margin-right: 0; }
   footer .license {
     float: left;
     width: 100%;
@@ -792,6 +886,21 @@ footer {
       padding-top: 10px; }
     footer .license p {
       color: #727888; }
+  footer .goToTop {
+    display: none;
+    z-index: 99;
+    background: #191C28;
+    opacity: .8;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    cursor: pointer;
+    background-image: url(../img/icons/sprite.png);
+    background-position: -104px 12px; }
+    footer .goToTop:hover {
+      opacity: 1; }
 
 @keyframes opacityOnHover {
   from, to {
@@ -1774,7 +1883,7 @@ img.mfp-img {
   text-align: center;
   border-radius: 6px;
   line-height: 60px;
-  margin: 25px 0 0 -5px;
+  margin: 25px 0 0 0;
   transition: 1s all;
   transform: translate(40px, 0);
   opacity: 0; }
@@ -1783,7 +1892,7 @@ img.mfp-img {
   color: #FFFFFF;
   font-size: 18px;
   clear: both;
-  margin: 5px 0 0 0;
+  margin: 15px 0 0 0;
   font-weight: 400;
   float: left;
   transition: 1s all;

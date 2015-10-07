@@ -10,14 +10,18 @@ footer {width:100%;
 		.title{font-size:15px;color:$titleC;text-transform:uppercase;padding-bottom:10px;font-weight:500;}
 	}
 	.divider{width:100%;height:1px;background-color:$borderFooterC;float: left;margin-bottom:10px;margin-top:10px;}
-	.payMethods, .partners{float:left;width:75%;
+	.payMethods, .partners{float:left;width:75%;position: relative;
 		.title{font-size:12px;text-transform:uppercase;line-height:100%}
-		ol{float: left;
-			li{float: left;margin-right:40px;margin-top:10px;
-			}
+		.arrow{background-image:url(../img/icons/sprite.png);background-position:-66px 0;width:29px;height:34px;cursor: pointer;position: absolute;right:-8px;top:47px;transition:.4s all;
+			&:hover{right:-12px;}
+		}
+		ul,.slider{float: left;
+			li{float: left;margin-right:40px;margin-top:10px;}
 		}
 	}
-	.payMethods ol li i{float: left;position: relative;height: 44px;
+	.slick-initialized{width: 98%;margin: 0;height: 59px;overflow: hidden;}
+	.slick-list{width: 100%;}
+	.payMethods .slider li i{float: left;position: relative;height: 44px;
 		&:after{content:"";background-image:url(../img/payment-methods/all.png);background-repeat:no-repeat;height:44px;position: absolute;top: 0;left: 0;z-index: 0;opacity:1;transition:.4s all;}
 		&:before{content:"";background-image:url(../img/payment-methods/all.png);background-repeat:no-repeat;height:44px;position: absolute;top: 0;left: 0;z-index: 1;transition:.4s all;opacity: 0}
 		&:hover:before{opacity: 1}
@@ -47,8 +51,8 @@ footer {width:100%;
 			&:hover:before{}
 		}
 		&.qiwi{width:91px;
-			&:after{width:91px;background-position:-481px 0;}
-			&:before{background-position:-481px -50px;width:91px;}
+			&:after{width:91px;background-position:-481px 5px;}
+			&:before{background-position:-481px -45px;width:91px;}
 			&:hover:after{width:91px;}
 			&:hover:before{}
 		}
@@ -72,7 +76,33 @@ footer {width:100%;
 		}
 	}
 	.partners{width:20%;margin-left:5%;
-		ol li{margin-top:5px;}
+		ul li{margin-top:3px;float: left;	
+			i{float: left;position: relative;height: 44px;		
+				&:after{content:"";height:44px;position: absolute;top: 0;left: 0;z-index: 0;opacity:1;transition:.4s all;}
+				&:before{content:"";height:44px;position: absolute;top: 0;left: 0;z-index: 1;transition:.4s all;opacity: 0}
+				&:hover:before{opacity: 1}
+				&:hover:after{opacity:0}
+				&.betSoft{width:93px;
+					&:after{width:93px;background-image:url(../img/partners/betsoft.png);background-repeat:no-repeat;background-position:0 3px;}
+					&:before{background-image:url(../img/partners/betsoft.png);background-position:0 -43px;width:93px;}
+					&:hover:after{width:93px;}
+					&:hover:before{}
+				}			
+				&.netEnt{width:79px;
+					&:after{width:79px;background-image:url(../img/partners/netent.png);background-repeat:no-repeat;}
+					&:before{background-image:url(../img/partners/netent.png);background-position:0 -44px;width:79px;}
+					&:hover:after{width:79px;}
+					&:hover:before{}
+				}			
+				&.microgaming{width:129px;
+					&:after{width:129px;background-image:url(../img/partners/microgaming.png);background-repeat:no-repeat;background-position: 0 5px}
+					&:before{background-image:url(../img/partners/microgaming.png);background-position:0 -42px;width:129px;}
+					&:hover:after{width:129px;}
+					&:hover:before{}
+				}	
+			}
+			&:last-child{margin-right:0;}
+		}
 	}
 	.secRow{float: left;width:100%;color:$title2ndC;margin:0 0 10px 0;
 		.left{float: left;width:75%;}
@@ -83,13 +113,24 @@ footer {width:100%;
 		}
 		.ratedR{border-radius:50%;font-size:18px;font-style:normal;border:1px solid $title2ndC;width:48px;height:48px;float: left;cursor:default;line-height: 44px;text-indent:6px;margin:8px 0 0 0}
 		.social{float: left;width:20%;margin-left:5%;
-			a{border-radius: 50%;color:$iconC;font-size:18px;border: 1px $iconC solid;width: 37px;height:37px;background-color:$backgroundC;margin:13px 10px 0 0;transition:.25s all;
+			a{border-radius: 50%;color:$iconC;font-size:18px;border: 1px $iconC solid;width: 37px;height:37px;background-color:$backgroundC;margin:13px 5.7% 0 0;transition:.25s all;
 				&:before{position: relative;text-align: center;display: block;vertical-align: middle;top:9px;}
-				&.socicon-twitter:hover{color:#3A589E;border-color:#3A589E;box-shadow:0 0 5px #3A589E}
-				&.socicon-facebook:hover{color:#55ACEE;border-color:#55ACEE;box-shadow:0 0 5px #55ACEE}
-				&.socicon-google:hover{color:#D6492F;border-color:#D6492F;box-shadow:0 0 5px #D6492F}
-				&.socicon-youtube:hover{color:#DF192A;border-color:#DF192A;box-shadow:0 0 5px #DF192A}
-				&.socicon-linkedin:hover{color:#007BB6;border-color:#007BB6;box-shadow:0 0 5px #007BB6}
+				&.socicon-twitter{color:#55ACEE;border-color:#55ACEE;
+					&:hover{box-shadow:0 0 5px #55ACEE;}
+				}
+				&.socicon-facebook{color:#3A589E;border-color:#3A589E;
+					&:hover{box-shadow:0 0 5px #3A589E;}
+				}
+				&.socicon-google{color:#D6492F;border-color:#D6492F;
+					&:hover{box-shadow:0 0 5px #D6492F;}
+				}
+				&.socicon-youtube{color:#DF192A;border-color:#DF192A;
+					&:hover{box-shadow:0 0 5px #DF192A;}
+				}
+				&.socicon-linkedin{color:#007BB6;border-color:#007BB6;
+					&:hover{box-shadow:0 0 5px #007BB6;}
+				}
+				&:last-child{margin-right:0}
 			}
 		}
 	}
@@ -97,8 +138,9 @@ footer {width:100%;
 		.title{font-size:14px;padding-bottom:10px;padding-top:10px}
 		p{color:$titleC;}
 	}
-
-
+	.goToTop{display: none;z-index: 99;background:$goUpC;opacity:.8;width: 50px;height:50px;position:fixed;right:30px;bottom:30px;cursor: pointer;background-image:url(../img/icons/sprite.png);background-position:-104px 12px;
+		&:hover{opacity:1;}
+	}
 	@keyframes opacityOnHover {
 	    from, to {
 	        opacity: 1;

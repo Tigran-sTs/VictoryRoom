@@ -311,6 +311,7 @@ ul, ol {
   list-style: none; }
 
 textarea,
+input[type=email],
 input[type=password],
 input[type=text] {
   font-size: 11px;
@@ -337,16 +338,12 @@ textarea {
 
 select {
   float: left;
-  background: #FFF;
   border: 1px #ECF0F6 solid;
   outline: none;
-  border-radius: 1px;
-  color: #9D9D9D;
-  padding: 0 8px;
-  width: 220px;
-  height: 34px;
-  font-size: 11px;
-  background: #FFF url(../img/icon/select-arrow.png) no-repeat right 14px;
+  color: #484F5E;
+  padding: 10px 15px 10px 10px;
+  font-size: 12px;
+  background: transparent url("../img/icons/select.png") no-repeat 90% 50%;
   -webkit-appearance: none;
   overflow: hidden;
   -moz-appearance: none;
@@ -356,12 +353,12 @@ select {
   appearance: none; }
 
 ::-webkit-input-placeholder {
-  font-size: 10px;
-  color: #D5DAE1; }
+  font-size: 12px;
+  color: #484F5E; }
 
 ::-moz-placeholder {
-  font-size: 10px;
-  color: #D5DAE1; }
+  font-size: 12px;
+  color: #484F5E; }
 
 /* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
 ::-moz-selection {
@@ -394,6 +391,48 @@ ul {
 label {
   color: #6b7684;
   cursor: default; }
+
+/*Styled checkboxes and radiobuttons*/
+input[type=checkbox], input[type=radio] {
+  display: none; }
+
+label {
+  position: relative;
+  float: left; }
+  label.radio:before {
+    content: "";
+    border-radius: 50%;
+    width: 14px;
+    height: 14px; }
+  label:before {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: 1px solid #505767;
+    float: left;
+    margin-right: 5px;
+    margin-top: 4px; }
+
+input[type=radio]:checked + label:after {
+  content: "";
+  border: 3px solid #57B667;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  left: 4px; }
+
+input[type=checkbox]:checked + label:after {
+  content: "";
+  padding: 2px 3px 2px 4px;
+  border: 3px solid #57B667;
+  border-top: none;
+  border-right: none;
+  position: absolute;
+  top: 7px;
+  left: 2px;
+  transform: rotate(-45deg); }
 
 header {
   width: 100%;
@@ -439,7 +478,7 @@ header {
     padding: 6px 1.30208333333333% 0;
     height: 100%;
     line-height: 100%;
-    color: #FFFFFF;
+    color: #e4e4e4;
     line-height: 440%;
     position: relative; }
     header nav a:hover {
@@ -474,7 +513,7 @@ header {
       header .acc .lang a {
         float: left;
         width: 100%;
-        color: #FFFFFF;
+        color: #e4e4e4;
         line-height: 100%;
         padding: 10px 0; }
         header .acc .lang a:first-child {
@@ -518,7 +557,7 @@ header {
       margin: 5px 0 0 15px;
       padding: 0 20px; }
   header .btn.registerC {
-    color: #FFFFFF;
+    color: #e4e4e4;
     background-color: #57B667;
     text-shadow: 0 0 1px #AAA; }
     header .btn.registerC:hover {
@@ -805,18 +844,139 @@ footer {
   100% {
     opacity: 0; } }
 
-.lightboxContent {
-  width: 650px;
+.mfp-content .lightboxContent {
+  width: 680px;
   min-height: 200px;
   background-color: #161A29;
-  margin: 0 auto; }
-  .lightboxContent .header {
+  margin: 0 auto;
+  position: relative; }
+  .mfp-content .lightboxContent .mfp-close {
+    color: #e4e4e4; }
+  .mfp-content .lightboxContent .header {
     width: 100%;
     float: left;
     height: 50px;
     background: #121623; }
-  .lightboxContent h3 {
-    font-size: 18px; }
+    .mfp-content .lightboxContent .header .logo {
+      display: block;
+      background: url(../img/logo_mini.png) no-repeat;
+      width: 160px;
+      height: 25px;
+      float: left;
+      margin: 14px 15px 0; }
+  .mfp-content .lightboxContent .banner {
+    float: left;
+    width: 280px;
+    padding: 2px; }
+    .mfp-content .lightboxContent .banner img {
+      width: 100%; }
+  .mfp-content .lightboxContent .half {
+    width: 49.4%;
+    box-sizing: border-box; }
+  .mfp-content .lightboxContent form.registration {
+    float: left;
+    padding: 10px 16px 15px;
+    width: 400px;
+    color: #484F5E; }
+    .mfp-content .lightboxContent form.registration h3 {
+      font-size: 18px;
+      color: #e4e4e4;
+      text-transform: uppercase;
+      font-weight: normal;
+      text-align: center;
+      letter-spacing: 1px;
+      padding: 0 0 5px; }
+    .mfp-content .lightboxContent form.registration .row {
+      margin: 0px 0px 5px;
+      position: relative;
+      float: left;
+      width: 100%; }
+      .mfp-content .lightboxContent form.registration .row input {
+        width: 100%;
+        background-color: transparent;
+        color: #505767;
+        border-color: #484F5E; }
+        .mfp-content .lightboxContent form.registration .row input.half {
+          width: 50%; }
+      .mfp-content .lightboxContent form.registration .row select {
+        float: left;
+        width: auto;
+        background: transparent url("../img/icons/select.png") no-repeat 89% 50%;
+        margin: 0 3px;
+        padding: 8px 17px 8px 8px;
+        border-color: #484F5E; }
+        .mfp-content .lightboxContent form.registration .row select:last-child {
+          margin: 0;
+          float: right; }
+        .mfp-content .lightboxContent form.registration .row select:first-child {
+          margin: 0; }
+      .mfp-content .lightboxContent form.registration .row .bonus {
+        position: relative; }
+        .mfp-content .lightboxContent form.registration .row .bonus input[type="text"] {
+          padding-right: 25px; }
+        .mfp-content .lightboxContent form.registration .row .bonus:after {
+          content: url("../img/icons/info.png");
+          width: 13px;
+          height: 13px;
+          position: absolute;
+          top: 24%;
+          right: 6px;
+          cursor: pointer;
+          z-index: 1; }
+      .mfp-content .lightboxContent form.registration .row label.radio {
+        margin: 6px 0 5px;
+        line-height: 170%; }
+      .mfp-content .lightboxContent form.registration .row a {
+        color: #505767;
+        text-decoration: underline; }
+      .mfp-content .lightboxContent form.registration .row.buttons {
+        width: 76%;
+        float: none;
+        margin: 0 auto; }
+      .mfp-content .lightboxContent form.registration .row.checkboxes {
+        padding: 10px 0; }
+        .mfp-content .lightboxContent form.registration .row.checkboxes label.checkbox {
+          margin: 5px 0; }
+          .mfp-content .lightboxContent form.registration .row.checkboxes label.checkbox span {
+            display: block;
+            width: 94%;
+            float: left;
+            padding-left: 15px;
+            box-sizing: border-box;
+            line-height: 130%; }
+    .mfp-content .lightboxContent form.registration a.btn {
+      display: block;
+      text-shadow: 0 0 1px #333;
+      clear: both;
+      text-decoration: none;
+      float: right;
+      text-align: center;
+      text-transform: uppercase;
+      position: relative; }
+      .mfp-content .lightboxContent form.registration a.btn.registerC {
+        color: #e4e4e4;
+        background: #57B667;
+        margin-bottom: 10px;
+        padding: 5px;
+        width: 100%; }
+      .mfp-content .lightboxContent form.registration a.btn.loginC {
+        color: #68C1E8;
+        border: 1px solid #68C1E8;
+        width: auto;
+        padding: 5px 20px; }
+      .mfp-content .lightboxContent form.registration a.btn + span {
+        display: block;
+        float: left;
+        color: #e4e4e4;
+        line-height: 210%; }
+      .mfp-content .lightboxContent form.registration a.btn:hover {
+        top: 1px; }
+    .mfp-content .lightboxContent form.registration .notice {
+      display: none; }
+    .mfp-content .lightboxContent form.registration .left {
+      float: left; }
+    .mfp-content .lightboxContent form.registration .right {
+      float: right; }
 
 /* Slider */
 .slick-slider {
@@ -1755,7 +1915,7 @@ img.mfp-img {
   position: absolute; }
 
 .details h2 {
-  color: #FFFFFF;
+  color: #e4e4e4;
   font-size: 48px;
   text-transform: uppercase;
   line-height: 120%;
@@ -1765,7 +1925,7 @@ img.mfp-img {
   opacity: 0; }
 
 .details a.btn {
-  color: #FFFFFF;
+  color: #e4e4e4;
   background: #57B667;
   width: 240px;
   height: 60px;
@@ -1780,7 +1940,7 @@ img.mfp-img {
   opacity: 0; }
 
 .details p.login {
-  color: #FFFFFF;
+  color: #e4e4e4;
   font-size: 18px;
   clear: both;
   margin: 5px 0 0 0;

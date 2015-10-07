@@ -51,7 +51,7 @@ jQuery(function($) {
 	$('#slides').slick({
 	  	dots: true,
 	  	infinite: true,
-	  	autoplay: true,
+	  	// autoplay: true,
 	  	duration: 5000,
 	  	centerPadding: '50%',
 	  	arrows: false,
@@ -75,16 +75,23 @@ jQuery(function($) {
 		  
 	});
 
-	var sliderSize = function(){ 
-	//fit slider image on window height
-		var sliderHeight = $(window).height();
-		$('#slides').css('height', sliderHeight);
-	});
-		sliderSize();
+	var sliderImgResize = function(){ 
 
-	$(window).on("resize", function(event){
-		sliderSize();
-	});
+ //fit slider image on window height
+ var sliderHeight = $(window).height();
+ $('#slides').css('height', sliderHeight);
+ console.log(sliderHeight);
+ //centered slider image
+ var imgWidth = $('.slick-active img').width();
+ var difference = (-1)*($(window).width() - imgWidth)/2;
+ $('.slick-active img').css({'marginLeft': '-' + difference + 'px'}, 10);
+ $('.slick-slide').css('height', sliderHeight);
+     // $('#slides').slick('setPosition');
+     sliderImgResize ;
+
+     $(window).on("resize", function(event){
+     	sliderImgResize ;
+     });
 
 	// jQuery('#slides').on('animated.slides', function () {
 	// 	if ($('li').is(":visible") ){
@@ -97,4 +104,5 @@ jQuery(function($) {
 
 
 
+};
 });

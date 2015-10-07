@@ -1,4 +1,45 @@
-.lightboxContent{width:650px;min-height:200px;background-color:$lightboxBackgroundC;margin:0 auto;
-	.header{width: 100%;float: left;height:50px;background:$backgroundC;}
-	h3{font-size:18px;}
+.mfp-content{ 
+	.lightboxContent{width:680px;min-height:200px;background-color:$lightboxBackgroundC;margin:0 auto;position: relative;
+		.mfp-close{color:$brightFontC;}
+		.header{width: 100%;float: left;height:50px;background:$backgroundC;
+			.logo{display:block;background: url(../img/logo_mini.png) no-repeat;width:160px;height:25px;float:left;margin:14px 15px 0;}
+		}
+		.banner{float:left;width:280px;padding: 2px;
+			img{width: 100%;}
+		}
+		.half{width: 49.4%;box-sizing:border-box;}
+		form.registration{ float:left;padding:10px 16px 15px; width: 400px; color:$title2ndC;		
+			h3{font-size:18px;color:$brightFontC;text-transform:uppercase;font-weight: normal;text-align: center;letter-spacing:1px;padding: 0 0 5px;}
+			.row{margin: 0px 0px 5px; position: relative; float: left; width: 100%;
+				input{width: 100%; background-color: transparent; color:$borderFooterC; border-color: $title2ndC;
+					&.half{width: 50%;}
+				}
+				select{float:left;width:auto;background:transparent url('../img/icons/select.png') no-repeat 89% 50%;margin:0 3px; padding: 8px 17px 8px 8px;border-color: $title2ndC;
+					&:last-child{margin: 0;float: right;}
+					&:first-child{margin: 0;}
+				}
+				.bonus{position: relative;
+					input[type="text"]{padding-right: 25px;}
+					&:after{content: url("../img/icons/info.png");width: 13px;height: 13px;position: absolute;top: 24%;right:6px;cursor:pointer;z-index: 1;}
+				} 	
+				label.radio{margin: 6px 0 5px; line-height: 170%;}
+				a{color:$borderFooterC;text-decoration:underline;}
+				&.buttons{width: 76%;float:none;margin:0 auto;}
+				&.checkboxes{padding: 10px 0;
+					label.checkbox{margin: 5px 0;
+						span{display:block;width:94%;float:left;padding-left:15px;box-sizing:border-box;line-height: 130%;}
+					}
+				}
+			}
+			a.btn{display: block;text-shadow: 0 0 1px #333;clear:both;text-decoration:none;float:right;text-align:center;text-transform:uppercase;position:relative;
+				&.registerC{color:$brightFontC;background:$btnC;margin-bottom:10px;padding:5px;width:100%;}
+				&.loginC{color: $btn2C;border:1px solid $btn2C;width:auto;padding: 5px 20px;}
+				+span{display:block;float:left;color:$brightFontC;line-height:210%;}
+				&:hover{top:1px;}
+			}
+			.notice{display: none;}
+			.left{float:left;}
+			.right{float:right;}
+		}		
+	}
 }

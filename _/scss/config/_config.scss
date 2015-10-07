@@ -14,9 +14,9 @@ $btnC : #57B667;
 $btn2C : #68C1E8;
 $headerC : #121623;
 $headerCO : rgba(18,22,35,.95);
-$brightFontC : #FFFFFF;
+$brightFontC : #e4e4e4;
 $textLinkC : $btnC;
-$goldishC : #68C1E8;
+// $goldishC : #68C1E8;
 $iconC : #727787;
 $titleC : #727888;
 $title2ndC : #484F5E;
@@ -53,6 +53,7 @@ a:focus{outline: none;}
 a:hover {}
 ul,ol{list-style: none;}
 textarea,
+input[type=email],
 input[type=password],
 input[type=text]{font-size: 11px;color: #9D9D9D;text-indent: 15px;outline: none;border:1px solid #ECF0F6;height: 34px;font-family: "Roboto"}
 input[type=text]{padding-top: 0}
@@ -60,13 +61,17 @@ select:focus,
 textarea:focus,
 input[type=text]:focus{box-shadow: 0 0 10px rgba(0,0,0,.1);transition:.4s all;}
 textarea{min-height:130px;padding: 15px;text-indent: 0 }
-select{float: left;background:#FFF;border:1px #ECF0F6 solid;outline: none;border-radius: 1px;color: #9D9D9D;padding: 0 8px;width:220px;height: 34px;font-size: 11px;background:#FFF url(../img/icon/select-arrow.png) no-repeat right 14px;-webkit-appearance: none;overflow: hidden;-moz-appearance: none;-webkit-appearance: none;-ms-appearance: none;-moz-appearance: none;appearance: none;}
+select{float: left;border:1px #ECF0F6 solid;outline: none;color: $title2ndC;padding: 10px 15px 10px 10px;font-size: 12px;background:transparent url('../img/icons/select.png') no-repeat 90% 50%;-webkit-appearance: none;overflow: hidden;-moz-appearance: none;-webkit-appearance: none;-ms-appearance: none;-moz-appearance: none;appearance: none;}
+// select{float: left;background:#FFF;border:1px #ECF0F6 solid;outline: none;border-radius: 1px;color: #9D9D9D;padding: 0 8px;width:220px;height: 34px;font-size: 11px;background:#FFF url(../img/icon/select-arrow.png) no-repeat right 14px;-webkit-appearance: none;overflow: hidden;-moz-appearance: none;-webkit-appearance: none;-ms-appearance: none;-moz-appearance: none;appearance: none;}
 // .checkbox label input {display: none;}
 // .checkbox label span {height: 17px; width: 17px;display: inline-block;margin: 15px 5px 0 0;position: relative;background: url(../img/icon/checkbox.png) top;top: 5px;transition: .2s all}
 // .checkbox input[type=checkbox]:checked + span {background: url(../img/icon/checkbox.png) bottom;}
 
-::-webkit-input-placeholder {font-size: 10px;color: #D5DAE1}
-::-moz-placeholder {font-size: 10px;color: #D5DAE1}
+
+// ::-webkit-input-placeholder {font-size: 10px;color: #D5DAE1}
+// ::-moz-placeholder {font-size: 10px;color: #D5DAE1}
+::-webkit-input-placeholder {font-size: 12px;color: $title2ndC}
+::-moz-placeholder {font-size: 12px;color: $title2ndC}
 
 /* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
 ::-moz-selection{background: rgba(25,25,25,.3);text-shadow: none;}
@@ -83,3 +88,17 @@ ul{list-style: none;}
 label{color: #6b7684;cursor: default;}
 
 
+/*Styled checkboxes and radiobuttons*/
+input[type=checkbox],input[type=radio]{display: none;}
+label{position: relative;float: left;
+	&.radio{
+		&:before{content:""; border-radius: 50%;width: 14px;height: 14px;}
+	}
+	&:before{content:"";display:block;width: 15px;height: 15px;background-color: transparent;border:1px solid $borderFooterC;float: left;margin-right: 5px;margin-top:4px;}
+}
+input[type=radio]:checked+label:after{
+	content: "";border:3px solid $btnC;border-radius: 50%;position: absolute;top:8px;left:4px;
+}
+input[type=checkbox]:checked+label:after{
+	content: "";padding:2px 3px 2px 4px;border:3px solid $btnC;border-top:none;border-right:none;position:absolute;top:7px;left:2px;transform:rotate(-45deg);
+}
